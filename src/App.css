@@ -1,38 +1,142 @@
-.App {
+.main {
+  background-color: black;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  fill: rgb(255, 232, 31);
+  width: 100%;
+  max-width: 45rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loading {
+  fill: yellow;
+  height: 70px;
+  width: 70px;
+  margin-top: 10rem;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Card styling */
+
+.card {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  max-width: 100%;
+  /* padding: 0 1em; */
+  margin: 1em 0;
+}
+
+.card-details {
+  text-align: start;
+  padding: 1.5em;
+  color: rgb(255, 255, 255);
+  transform: perspective(1px) translateZ(0px);
+  box-shadow: transparent 0px 0px 10px 3px, rgb(0, 0, 0) 0px 0px 10px;
+  transition: all 0.3s ease 0s;
+  overflow: hidden;
+  /* border-radius: 0.3em;
+    margin: 1em 0; */
+}
+
+.card:nth-child(1) > * {
+  background-image: url("https://finmavis.github.io/swapi-task/static/media/bg-card-1.0c96fd00.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card:nth-child(2) > * {
+  background-image: url("https://finmavis.github.io/swapi-task/static/media/bg-card-2.b0a7b209.png");
+}
+.card:nth-child(3) > * {
+  background-image: url("https://finmavis.github.io/swapi-task/static/media/bg-card-3.1914d853.png");
+}
+.card:nth-child(4) > * {
+  background-image: url("https://finmavis.github.io/swapi-task/static/media/bg-card-4.c21c4d4b.png");
+}
+.card:nth-child(5) > * {
+  background-image: url("https://finmavis.github.io/swapi-task/static/media/bg-card-5.67d061d6.png");
+}
+.card:nth-child(6) > * {
+  background-image: url("https://finmavis.github.io/swapi-task/static/media/bg-card-6.b4fea25d.png");
+}
+
+.card:hover {
+  box-shadow: rgb(32, 152, 209) 0px 0px 10px 3px, rgb(0, 0, 0) 0px 0px 10px;
+}
+
+a {
+  padding-top: 10px;
+  color: rgb(255, 232, 31);
+  text-decoration: none;
+}
+
+/* .link a {
+} */
+
+.summary {
+  text-align: justify;
+  font-family: inherit;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  display: -webkit-box;
+  white-space: normal;
+  /* margin-bottom: 2rem; */
+  /* width: 310px; */
+  height: 100px;
+  /* -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    padding-bottom: 30px; */
+  /* padding: 1em 0; */
+}
+
+.line-break {
+  margin: 1em 0;
+  border-bottom: 2px solid rgb(142, 46, 46);
+}
+
+.date {
+  color: rgb(157, 157, 157);
+  /* font-size: 14px; */
+  font-size: 1em;
+  margin-bottom: 1em;
+  /* margin-top: -15px; */
+  /* color: #9d9d9d; */
+}
+
+h2 {
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 40rem) {
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+}
+
+@media (min-width: 60rem) {
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
   }
 }
