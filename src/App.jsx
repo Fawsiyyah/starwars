@@ -1,9 +1,9 @@
-import Page from "./components/pages";
+import Post from "./components/pages";
 import "./App.css"
 
 const App = () => {
     return (
-        <Page />
+        <Post />
     )
 }
 export default App;
